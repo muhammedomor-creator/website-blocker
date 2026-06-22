@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      padding: 20px;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+    h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #00d2ff;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    label {
+      font-size: 12px;
+      color: #e0e0e0;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      box-sizing: border-box;
+      outline: none;
+    }
+    input:focus {
+      border-color: #00d2ff;
+      box-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+    }
+    button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .status {
+      text-align: center;
+      font-size: 12px;
+      color: #00ff88;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Smart Redirect Blocker</h3>
+    
+    <label for="blockedSites">ব্লক করার ওয়েবসাইট (কমা দিয়ে লেখো):</label>
+    <input type="text" id="blockedSites" placeholder="facebook.com, youtube.com">
+    
+    <label for="redirectLink">রিডাইরেক্ট করার লিংক:</label>
+    <input type="text" id="redirectLink" placeholder="https://google.com">
+    
+    <button id="saveBtn">সেটিংস সেভ করুন</button>
+    <div class="status" id="statusMsg">সফলভাবে সেভ হয়েছে!</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
