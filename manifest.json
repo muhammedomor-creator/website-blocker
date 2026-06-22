@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Redirect Blocker",
+  "version": "1.0",
+  "description": "পছন্দমতো ওয়েবসাইট ব্লক করে অন্য লিংকে রিডাইরেক্ট করার কাস্টম এক্সটেনশন",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
